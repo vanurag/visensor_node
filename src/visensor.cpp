@@ -98,7 +98,7 @@ void ViSensor::init() {
     calibration_pub_.insert(std::pair<visensor::SensorId::SensorId, ros::Publisher>(camera_id, temp_pub));
   }
 
-
+  /*
   if (!drv_.isStereoCameraFlipped()){
     //Generate Stereo ROS config, assuming than cam0 and cam1 are in fronto-parallel stereo configuration
     if (getRosStereoCameraConfig(SensorId::CAM0, cinfo_.at(SensorId::CAM0),
@@ -115,6 +115,7 @@ void ViSensor::init() {
     else
       ROS_INFO("Could not read stereo calibration for cam0 and cam1.");
   }
+  */
 
   // Initialize imus
   for (auto imu_id : list_of_imu_ids_) {
